@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content= "width=device-width, user-scalable=nр">
+    <title>Weather</title>
+    <link rel="shortcut icon" href="favicon-16x16.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div id="trowError"></div>
+            <div class="con">
+            <div class="input_button_div">
+                <input type="text" id="city" placeholder="Enter city name">
+                <button onclick="checkCity()"></button>
+            </div>
+            </div>
+            <div id="loading-icon" style="display: none;">
+                <img src="loading.gif" alt="Loading...">
+              </div>
+            <div id="show"> </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
