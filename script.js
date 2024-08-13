@@ -1,8 +1,8 @@
-const APIkey = '98ef3fabf21d436781f2478e69bb7125';
+const APIkey = 'a84e82e01c494f079c1115049242007';
 let globUrl ;
 const checkCity = () => {
     const cityName = document.getElementById('city').value;
-    globUrl =`https://api.weatherbit.io/v2.0/current?city=${cityName}&KEY=${APIkey}`;
+    globUrl =`http://api.weatherapi.com/v1/current.json?key=${APIkey}&q=${cityName}`;
     // const url = `https://api.weatherbit.io/v2.0/current?city=${cityName}&KEY=${APIkey}`;
     if (cityName == "") {
         document.getElementById('trowError').innerHTML = "Please enter a city name";
@@ -44,7 +44,9 @@ const getCurrentLocationWeather = () => {
                <h4>Time:${time}</h4>
                </div>
             </div>
-            <div class="show_div2"><h4>${Math.ceil(current.main.temp-273.15)}°C</h4></div>
+            <div class="show_div2"><h4>${Math.ceil(current.main.temp-273.15)}°C</h4>
+            <h4 class="h4_div2">${current.weather[0].main}</h4>
+            </div>
             <div class="show_div3"><h4>Humidity: ${current.main.humidity}%</h4>
             <h4>Description: ${current.weather[0].description}</h4></div>
             `;
@@ -65,12 +67,9 @@ const disWeather = () =>{
         .then(current => {
             console.log(current);
             document.getElementById('show').innerHTML = `
-        <div class="show_div1"><h4>${current.data[0].city_name}, ${current.data[0].country_code}</h4>
-        <h4>Time: ${current.data[0].ob_time}</h4></div>
-        <div class="show_div2"><h4>${current.data[0].temp}°C</h4></div>
-        <div class="show_div3"><h4>Humidity: ${current.data[0].rh}%</h4>
-        <h4>Description: ${current.data[0].weather.description}</h4>
-        <h4>Preciptation: ${current.data[0].precip}</h4></div>
+        <div class="show_div1"><h4>${current.location.name}, ${current.location.country}</h4>
+        <h4>Local Time: ${current.location.localtime}</h4></div>
+
         `;
         document.getElementById('loading-icon').style.display = 'none';
         })
