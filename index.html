@@ -14,17 +14,13 @@
 
 <body>
     <div class="container">
-        <div class="header">
-            <div id="trowError"></div>
-            <div class="con">
-            <div class="input_button_div">
-                <input type="text" id="city" placeholder="Enter city name">
+        <div class="input_button_div">
+                <div id="trowError"></div>
+                <div class="inDiv">
+                <input type="text" id="city" placeholder="Enter city name" autocomplete="off">
                 <button onclick="checkCity()"></button>
             </div>
             </div>
-            <div id="loading-icon" style="display: none;">
-                <img src="loading.gif" alt="Loading...">
-              </div>
             <div id="show"> </div>
         </div>
     </div>

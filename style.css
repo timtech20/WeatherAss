@@ -1,8 +1,6 @@
 
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&family=Oxygen:wght@300;400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 
 * {
@@ -14,167 +12,327 @@
 .container {
     width: 100%;
     height: 100vh;
-    background-color: rgb(54, 52, 52);
-    /* background-image: url(/img/perfect-weather-with-gradient-sky-ym0nn79vhoqg34v3\ \(1\).jpg); */
+    background-image:linear-gradient(rgba(39, 17, 17, 0.4),rgba(10, 10, 10, 0.5),rgba(12, 12, 12, 0.8)), url(/img/for_bigscreen.jpeg);
+    background-size: 100% 100%;
     background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center
+    background-repeat: no-repeat;
+    color: white;
+    overflow: hidden;
+
+    font-family: "Oxygen", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing:1px;
 }
 
 .header {
-    width: 35%;
-    height: 280px;
-    background-color: aqua;
-    background-image: linear-gradient(to left bottom, rgba(26, 25, 25, 0.3), rgba(88, 83, 83, 0.2), rgba(238, 231, 231, 0.1)), url(img/draw1.webp);
-    background-position: center;
-    background-size: cover;
-    text-align: center;
-    border-radius: 15px;
-    /* place-content: center; */
+
 }
 
 .con {
-    width: 100%;
-    height: 16%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+
 }
 
 .input_button_div {
-    width: 80%;
-    height: 100%;
-    border-radius: 20px;
-    background-color: aliceblue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0px 40px;
-    text-align: center;
+    width: 60%;
+    position: absolute;
+    top: 25px;
+    padding: 0px 10px;
+
 }
 
 input {
-    outline: none;
-    width: 70%;
-    height: 80%;
-    margin-left: 0px;
-    border: none;
+    width: 80%;
+    height: 40px;
     background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom:2px solid white;
+    text-indent: 10px;
+    color: white;
+    font-family: "Oxygen", sans-serif;
+    font-size: 1em;
+    letter-spacing: 2px;
+    
+
+}
+
+::placeholder{
+    color: white;
+    font-family: "Oxygen", sans-serif;
+    font-size: 1.1em;
+    letter-spacing: 0px;
+
 }
 
 button {
-    width: 11%;
-    height: 90%;
-    border: none;
-    background-color: transparent;
-    background-image: url(/img/svgexport-20.svg);
-    background-position: 5px center;
-    background-size: 150% 150%;
-    background-repeat: no-repeat;
+    width: 5%;
+    height: 40px;
     border-radius: 50%;
+    background-image: url(img/search-svgrepo-com.svg);
+    background-size: 80% 80%;
+    background-position: 4px center;
+    background-repeat: no-repeat;
+    color: white;
+    overflow: hidden;
+    border: none;
 
 }
 
+.inDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 button:active {
-    background-color: rgb(150, 150, 248);
-    background-image: url(/img/svgexport-21.svg);
-    background-position: 2px;
-    background-size: 90% 90%;
-    background-repeat: no-repeat;
+
 }
 
 #trowError {
-    width: 100%;
-    height: 10px;
-    padding: 5px 0px;
-    color: brown;
+    text-align:center;
+    /* color:red; */
 }
 
 #show {
     width: 100%;
-    height: 70%;
-    margin-top: 20px;
-    text-align: justify;
-    padding: 10px 20px;
+    height: 100%;
+    display: flex;
+    /* justify-content: center; */
+    /* background-color: black; */
+
+
 }
 
+
+
 .show_div1 {
-    width: 100%;
-    height: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* color: rgb(88, 156, 233); */
-    font-family: "PT Sans", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-
-
+    width: 70%;
+    height: 100%;
 }
 
 .show_div2 {
-    text-align: center;
-    margin-top: 5px;
-    font-size: 50px;
+    position: absolute;
+    bottom: 90px;
+    width: 60%;
+    padding: 0px 30px;
+}
+
+.show_con{
+    width: 30%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.show_con2{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 30px;
+    /* gap: 200px 0px; */
+}
+    
+
+
+
+
+.show_div4{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px 0px;
+    width: 100%;
+    
+}
+.show_div5{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap: 40px 40px;
+}
+
+.showH_div1{
+    display: flex;
+    justify-content: space-between;
+}
+
+.h4_disc{
+    font-size: 1em;
+    color: rgb(201, 201, 201);
+}
+.h4_disc2{
+    font-size: 15px;
+    text-transform: capitalize;
+    font-style: italic;
+    font-weight: 550;
+}
+
+hr{
+    width: 100%;
+}
+
+.desMe{
+    width: 100%;
+    text-align: end;
+}
+
+.topText{
+    font-size: 1.3em;
+}
+
+.temp_div{
+    width: 100%;
+    font-size: 7em;
     font-weight: 500;
-    font-family: "PT Sans", sans-serif;
     font-style: italic;
-    color: #ffd700;
-
+    letter-spacing: 5px;
+    font-family: "Oxygen", sans-serif;
 }
 
-.show_div3{
-    font-family: "PT Sans", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size:13px;
+.time_div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    margin-top: -30px;
 }
 
-.h4_div2{
-    text-align: center;
+.city_h4{
+    font-size: 2em;
+    font-weight: 500;
+    font-family: "Oxygen", sans-serif;
+}
+.time_h4{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Oxygen", sans-serif;
     margin-top: 5px;
-    font-size: 20px;
-    font-weight: 700;
-    font-family: "PT Sans", sans-serif;
-    font-style: italic;
-    color: black;
 }
 
 @media only screen and (max-width:500px) {
-    .header {
-        width: 90%;
-        height: 280px;
-        background-color: aqua;
-        background-image: linear-gradient(to left bottom, rgba(26, 25, 25, 0.3), rgba(88, 83, 83, 0.2), rgba(238, 231, 231, 0.1)), url(img/draw1.webp);
-        background-position: center;
-        background-size: cover;
-        text-align: center;
-        border-radius: 15px;
-        /* place-content: center; */
+    .container {
+        background-image:linear-gradient(rgba(39, 4, 4, 0.2),rgba(10, 10, 10, 0.5),rgba(12, 12, 12, 0.8)), url(/img/for_smallscreen.jpeg);
+        overflow:scroll;
+        background-color: rgb(43, 42, 42);
     }
 
+    #show {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
 
-    button {
-        width: 14%;
-        height: 90%;
-        border: none;
+    .show_con{
+        width: 100%;
+        height: 70%;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        position: relative;
+        top: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .show_div1 {
+        width: 100%;
+        height: 50%;
         background-color: transparent;
-        background-image: url(/img/svgexport-20.svg);
-        background-position: 5px center;
-        background-size: 150% 150%;
-        background-repeat: no-repeat;
-        border-radius: 50%;
+        z-index: 9988;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .show_div2 {
+        position: static;
+        width: 90%;
+        /* text-align: center; */
+        padding: 0px 0px;
+        
+
+    }
+    .temp_div{
+        width: 100%;
+        font-size: 7.5em;
+        font-weight: 500;
+        font-style: normal;
+        letter-spacing: 0px;
+        text-align: center;
+        /* background-color: white; */
+    
+    }
+
+    .h4_disc{
+        font-size: 1em;
+        color: rgb(201, 201, 201);
+        font-weight: 900;
+
+        
+    }
+    .h4_disc2{
+        font-size: 15px;
+        text-transform: capitalize;
+        font-style: italic;
+        font-weight: 550;
+    }
+
+    .time_div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .city_h4{
+        font-size: 1.5em;
+        font-weight: 500;
+        font-family: "Oxygen", sans-serif;
+    }
+    .time_h4{
+        font-size: 16px;
+        font-weight: 400;
+        margin-top: 5px;
+    }
+
+    .input_button_div {
+        width: 100%;
+        position: static;
+        margin-top: 15px;
+        padding: 0px 10px;
+    }
+    
+    input {
+        width: 70%;
+        height: 40px;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        border-bottom:2px solid white;
+        text-indent: 10px;
+        color: white;
+        font-family: "Oxygen", sans-serif;
+        font-size: 1em;
+        letter-spacing: 2px;
+        border-radius: 0px;
+        
     
     }
     
-    button:focus {
-        background-color: rgb(150, 150, 248);
-        background-image: url(/img/svgexport-21.svg);
-        background-position: 2px;
-        background-size: 90% 90%;
-        background-repeat: no-repeat;
+    ::placeholder{
+        color: white;
+        font-family: "Oxygen", sans-serif;
+        font-size: 1.1em;
+        letter-spacing: 0px;
+    
     }
 }

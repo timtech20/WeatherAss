@@ -13,7 +13,7 @@ const checkCity = () => {
     }
 
     else {
-        document.getElementById('loading-icon').style.display = 'block';
+        // document.getElementById('loading-icon').style.display = 'block';  
 
         Promise.all([
             fetch(globUrl).then(response => response.json()),
@@ -22,14 +22,44 @@ const checkCity = () => {
                 .then(([currents,openWeatherResponse]) => {
                     console.log(currents);
                     document.getElementById('show').innerHTML = `
-                <div class="show_div1"><div><h4>${currents.location.name}, ${currents.location.country}</h4></div>
-                <div><h4>Timestamp: ${currents.location.localtime}</h4></div></div>
-                <div class="show_div2"><h4>${currents.current.temp_c}°C</h4></div>
-                <div class="show_div3"><h4>Humidity:${currents.current.humidity} %</h4>
-                <h4>Description: ${openWeatherResponse.weather[0].description}</h4>
-                <h4>Preciptation: ${currents.current.precip_mm}</h4></div>
+                    
+                <div class="show_div1">
+                <div class="show_div2">
+                <div class="temp_div">
+                <div class="temp_h4">${currents.current.temp_c}°C</div>
+                </div>
+                <div class="time_div">
+                <div>
+                <div class="city_h4">${currents.location.name}, ${currents.location.country}</div>
+                <h4 class="time_h4">${currents.location.localtime}</h4>
+                </div>
+                <img src=${currents.current.condition.icon} alt="" / width="100" style="border-radius: 50% ;">
+                </div>
+                </div>
+                </div>
+                
+
+                <div class="show_con">
+                <div class="show_con2">
+                <div class="topText">Weather Details</div>
+                <div class="show_div4">
+                <div class="showH_div1"><h4  class="h4_disc">Humidity</h4>  <h4 class="h4_disc2"> ${currents.current.humidity}%</div>
+                <div class="showH_div1"><h4  class="h4_disc">Description</h4> <h4 class="h4_disc2">${openWeatherResponse.weather[0].description}</h4></div>
+                <div class="showH_div1"><h4  class="h4_disc">Preciptation</h4> <h4  class="h4_disc2">${currents.current.precip_mm}</h4></div>
+                <div class="showH_div1"><h4  class="h4_disc">Wind</h4> <h4  class="h4_disc2">${currents.current.wind_mph} mph</h4></div>
+                </div>
+                <hr>
+                <div class="show_div5">
+                <div class="showH_div1"><h4 class="h4_disc"> Min</h4> <h4  class="h4_disc2">${Math.ceil(openWeatherResponse.main.temp_min-273.15)}°C</h4></div>
+                <div class="showH_div1"><h4 class="h4_disc"> Max</h4> <h4  class="h4_disc2">${Math.ceil(openWeatherResponse.main.temp_max-273.15)}°C</h4></div>
+                <div class="showH_div1"><h4 class="h4_disc"> Feels</h4> <h4  class="h4_disc2"> ${Math.ceil(openWeatherResponse.main.feels_like-273.15)}°C</h4></div>
+                <div class="showH_div1"><h4 class="h4_disc"> pessure</h4>  <h4 class="h4_disc2">${currents.current.pressure_mb}hPa</h4></div>
+                </div>
+                <div class="desMe">Designed by<a href="">Timtech</a></div>
+                </div>
+                </div>
                 `;
-                document.getElementById('loading-icon').style.display = 'none';
+                // document.getElementById('loading-icon').style.display = 'none';
                 })
                 .catch(error => console.error('Error fetching the weather data:', error));
             document.getElementById('city').value = ""
@@ -51,24 +81,51 @@ const getCurrentLocationWeather = () => {
         let API = 'd98fa62403f66e02c7d6548fb8127938'
         globUrl =`https://api.weatherapi.com/v1/current.json?key=${APIkey}&q=${lat},${lon}`;
         const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API}`;
-        document.getElementById('loading-icon').style.display = 'block';
+        // document.getElementById('loading-icon').style.display = 'block';
         Promise.all([
             fetch(globUrl).then(response => response.json()),
             fetch(url).then(response => response.json())
         ])
         .then(([currents,openWeatherResponse]) => {
                 document.getElementById('show').innerHTML = `
-             <div class="show_div1"><h4>${currents.location.name}, ${currents.location.country}</h4>
-                <div><h4>Date: ${date}</h4>
-                <h4>Time: ${time}</h4>
+
+                <div class="show_div1">
+                <div class="show_div2">
+                <div class="temp_div">
+                <div class="temp_h4">${currents.current.temp_c}°C</div>
+                </div>
+                <div class="time_div">
+                <div>
+                <div class="city_h4">${currents.location.name}, ${currents.location.country}</div>
+                <h4 class="time_h4">${currents.location.localtime}</h4>
+                </div>
+                <img src=${currents.current.condition.icon} alt="" / width="100" style="border-radius: 50% ;">
                 </div>
                 </div>
-                <div class="show_div2"><h4>${currents.current.temp_c}°C</h4></div>
-                <div class="show_div3"><h4>Humidity:${currents.current.humidity} %</h4>
-                <h4>Description: ${openWeatherResponse.weather[0].description}</h4>
-                <h4>Preciptation: ${currents.current.precip_mm}</h4></div>
+                </div>
+                
+
+                <div class="show_con">
+                <div class="show_con2">
+                <div class="topText">Weather Details</div>
+                <div class="show_div4">
+                <div class="showH_div1"><h4  class="h4_disc">Humidity</h4>  <h4 class="h4_disc2"> ${currents.current.humidity}%</div>
+                <div class="showH_div1"><h4  class="h4_disc">Description</h4> <h4 class="h4_disc2">${openWeatherResponse.weather[0].description}</h4></div>
+                <div class="showH_div1"><h4  class="h4_disc">Preciptation</h4> <h4  class="h4_disc2">${currents.current.precip_mm}</h4></div>
+                <div class="showH_div1"><h4  class="h4_disc">Wind</h4> <h4  class="h4_disc2">${currents.current.wind_mph} mph</h4></div>
+                </div>
+                <hr>
+                <div class="show_div5">
+                <div class="showH_div1"><h4 class="h4_disc"> Min</h4> <h4  class="h4_disc2">${Math.ceil(openWeatherResponse.main.temp_min-273.15)}°C</h4></div>
+                <div class="showH_div1"><h4 class="h4_disc"> Max</h4> <h4  class="h4_disc2">${Math.ceil(openWeatherResponse.main.temp_max-273.15)}°C</h4></div>
+                <div class="showH_div1"><h4 class="h4_disc"> Feels</h4> <h4  class="h4_disc2"> ${Math.ceil(openWeatherResponse.main.feels_like-273.15)}°C</h4></div>
+                <div class="showH_div1"><h4 class="h4_disc"> pessure</h4>  <h4 class="h4_disc2">${currents.current.pressure_mb}hPa</h4></div>
+                </div>
+                <div class="desMe">Designed by<a href="">Timtech</a></div>
+                </div>
+                </div>
                 `;
-            document.getElementById('loading-icon').style.display = 'none';
+            // document.getElementById('loading-icon').style.display = 'none';
             })
             .catch(error => console.error('Error fetching the weather data:', error));
     });
