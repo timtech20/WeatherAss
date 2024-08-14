@@ -30,10 +30,10 @@ const checkCity = () => {
                 </div>
                 <div class="time_div">
                 <div>
-                <div class="city_h4">${currents.location.name}, ${currents.location.country}</div>
+                <div class="city_h4">${currents.location.name}, ${openWeatherResponse.sys.country}</div>
                 <h4 class="time_h4">${currents.location.localtime}</h4>
                 </div>
-                <img src=${currents.current.condition.icon} alt="" / width="100" style="border-radius: 50% ;">
+                <img src=${currents.current.condition.icon} alt="" / width="70" style="border-radius: 50% ;">
                 </div>
                 </div>
                 </div>
@@ -50,12 +50,13 @@ const checkCity = () => {
                 </div>
                 <hr>
                 <div class="show_div5">
-                <div class="showH_div1"><h4 class="h4_disc"> Min</h4> <h4  class="h4_disc2">${Math.ceil(openWeatherResponse.main.temp_min-273.15)}°C</h4></div>
-                <div class="showH_div1"><h4 class="h4_disc"> Max</h4> <h4  class="h4_disc2">${Math.ceil(openWeatherResponse.main.temp_max-273.15)}°C</h4></div>
-                <div class="showH_div1"><h4 class="h4_disc"> Feels</h4> <h4  class="h4_disc2"> ${Math.ceil(openWeatherResponse.main.feels_like-273.15)}°C</h4></div>
-                <div class="showH_div1"><h4 class="h4_disc"> pessure</h4>  <h4 class="h4_disc2">${currents.current.pressure_mb}hPa</h4></div>
+                <div class="showH_div1"><div class="h4_disc"> Min</div> <h4  class="h4_disc2">${Math.ceil(openWeatherResponse.main.temp_min-273.15)}°C</h4></div>
+                <div class="showH_div1"><div class="h4_disc"> Max</div> <h4  class="h4_disc2">${Math.ceil(openWeatherResponse.main.temp_max-273.15)}°C</h4></div>
+                <div class="showH_div1"><div class="h4_disc"> Feels</div> <h4  class="h4_disc2"> ${Math.ceil(openWeatherResponse.main.feels_like-273.15)}°C</h4></div>
+                <div class="showH_div1"><div class="h4_disc"> Pessure</div>  <h4 class="h4_disc2">${currents.current.pressure_mb}hPa</h4></div>
                 </div>
-                <div class="desMe">Designed by<a href="">Timtech</a></div>
+                <div class="desMe">Designed by<a href="https://github.com/timtech20
+                ">Timtech</a></div>
                 </div>
                 </div>
                 `;
@@ -96,10 +97,10 @@ const getCurrentLocationWeather = () => {
                 </div>
                 <div class="time_div">
                 <div>
-                <div class="city_h4">${currents.location.name}, ${currents.location.country}</div>
+                <div class="city_h4">${currents.location.name}, ${openWeatherResponse.sys.country}</div>
                 <h4 class="time_h4">${currents.location.localtime}</h4>
                 </div>
-                <img src=${currents.current.condition.icon} alt="" / width="100" style="border-radius: 50% ;">
+                <img src=${currents.current.condition.icon} alt="" / width="70" style="border-radius: 50% ;">
                 </div>
                 </div>
                 </div>
@@ -116,12 +117,12 @@ const getCurrentLocationWeather = () => {
                 </div>
                 <hr>
                 <div class="show_div5">
-                <div class="showH_div1"><h4 class="h4_disc"> Min</h4> <h4  class="h4_disc2">${Math.ceil(openWeatherResponse.main.temp_min-273.15)}°C</h4></div>
-                <div class="showH_div1"><h4 class="h4_disc"> Max</h4> <h4  class="h4_disc2">${Math.ceil(openWeatherResponse.main.temp_max-273.15)}°C</h4></div>
-                <div class="showH_div1"><h4 class="h4_disc"> Feels</h4> <h4  class="h4_disc2"> ${Math.ceil(openWeatherResponse.main.feels_like-273.15)}°C</h4></div>
-                <div class="showH_div1"><h4 class="h4_disc"> pessure</h4>  <h4 class="h4_disc2">${currents.current.pressure_mb}hPa</h4></div>
+                <div class="showH_div1"><div class="h4_disc"> Min</div> <h4  class="h4_disc2">${Math.ceil(openWeatherResponse.main.temp_min-273.15)}°C</h4></div>
+                <div class="showH_div1"><div class="h4_disc"> Max</div> <h4  class="h4_disc2">${Math.ceil(openWeatherResponse.main.temp_max-273.15)}°C</h4></div>
+                <div class="showH_div1"><div class="h4_disc"> Feels</div> <h4  class="h4_disc2"> ${Math.ceil(openWeatherResponse.main.feels_like-273.15)}°C</h4></div>
+                <div class="showH_div1"><div class="h4_disc"> Pessure</div>  <h4 class="h4_disc2">${currents.current.pressure_mb}hPa</h4></div>
                 </div>
-                <div class="desMe">Designed by<a href="">Timtech</a></div>
+                <div class="desMe">Designed by<a href="https://github.com/timtech20">Timtech</a></div>
                 </div>
                 </div>
                 `;

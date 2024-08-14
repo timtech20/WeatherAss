@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&family=Oxygen:wght@300;400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
@@ -12,26 +11,18 @@
 .container {
     width: 100%;
     height: 100vh;
-    background-image:linear-gradient(rgba(39, 17, 17, 0.4),rgba(10, 10, 10, 0.5),rgba(12, 12, 12, 0.8)), url(/img/for_bigscreen.jpeg);
+    background-image: linear-gradient(rgba(39, 17, 17, 0.4), rgba(10, 10, 10, 0.5), rgba(12, 12, 12, 0.8)), url(/img/for_bigscreen.jpeg);
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
     color: white;
     overflow: hidden;
-
     font-family: "Oxygen", sans-serif;
     font-weight: 600;
     font-style: normal;
-    letter-spacing:1px;
+    letter-spacing: 1px;
 }
 
-.header {
-
-}
-
-.con {
-
-}
 
 .input_button_div {
     width: 60%;
@@ -47,17 +38,17 @@ input {
     background-color: transparent;
     outline: none;
     border: none;
-    border-bottom:2px solid white;
+    border-bottom: 2px solid white;
     text-indent: 10px;
     color: white;
     font-family: "Oxygen", sans-serif;
     font-size: 1em;
     letter-spacing: 2px;
-    
+
 
 }
 
-::placeholder{
+::placeholder {
     color: white;
     font-family: "Oxygen", sans-serif;
     font-size: 1.1em;
@@ -79,19 +70,15 @@ button {
 
 }
 
-.inDiv{
+.inDiv {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 
-button:active {
-
-}
-
 #trowError {
-    text-align:center;
+    text-align: center;
     /* color:red; */
 }
 
@@ -99,16 +86,12 @@ button:active {
     width: 100%;
     height: 100%;
     display: flex;
-    /* justify-content: center; */
-    /* background-color: black; */
-
-
 }
 
 
 
 .show_div1 {
-    width: 70%;
+    width: 65%;
     height: 100%;
 }
 
@@ -119,15 +102,17 @@ button:active {
     padding: 0px 30px;
 }
 
-.show_con{
-    width: 30%;
+.show_con {
+    width: 35%;
     height: 100%;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.show_con2{
+
+.show_con2 {
     width: 100%;
     height: 90%;
     display: flex;
@@ -137,20 +122,21 @@ button:active {
     padding: 0px 30px;
     /* gap: 200px 0px; */
 }
-    
 
 
 
 
-.show_div4{
+
+.show_div4 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 40px 0px;
     width: 100%;
-    
+
 }
-.show_div5{
+
+.show_div5 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -158,36 +144,52 @@ button:active {
     gap: 40px 40px;
 }
 
-.showH_div1{
+.showH_div1 {
     display: flex;
     justify-content: space-between;
 }
 
-.h4_disc{
+.h4_disc {
     font-size: 1em;
     color: rgb(201, 201, 201);
 }
-.h4_disc2{
+
+.h4_disc2 {
     font-size: 15px;
     text-transform: capitalize;
     font-style: italic;
     font-weight: 550;
 }
 
-hr{
+hr {
     width: 100%;
 }
 
-.desMe{
+.desMe {
     width: 100%;
     text-align: end;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgb(201, 201, 201);
+    font-family: "PT Sans", sans-serif;
+
 }
 
-.topText{
+a{
+    font-style: italic;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+    /* font-family: "PT Sans", sans-serif; */
+}
+
+.topText {
     font-size: 1.3em;
 }
 
-.temp_div{
+.temp_div {
     width: 100%;
     font-size: 7em;
     font-weight: 500;
@@ -196,7 +198,7 @@ hr{
     font-family: "Oxygen", sans-serif;
 }
 
-.time_div{
+.time_div {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -204,22 +206,84 @@ hr{
     margin-top: -30px;
 }
 
-.city_h4{
+.city_h4 {
     font-size: 2em;
     font-weight: 500;
     font-family: "Oxygen", sans-serif;
 }
-.time_h4{
+
+.time_h4 {
     font-size: 16px;
     font-weight: 400;
     font-family: "Oxygen", sans-serif;
     margin-top: 5px;
 }
 
+.desMeS {
+    display: none;
+}
+
+@media only screen and (max-width:1000px) {
+    .show_div1 {
+        width: 60%;
+        height: 100%;
+
+    }
+
+    .show_con {
+        width: 40%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .time_div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .city_h4 {
+        font-size: 1.5em;
+        font-weight: 500;
+        font-family: "Oxygen", sans-serif;
+    }
+
+    .time_h4 {
+        font-size: 16px;
+        font-weight: 400;
+        margin-top: 5px;
+    }
+
+    button {
+        width: 10%;
+        height: 50px;
+        border-radius: 50%;
+        background-image: url(img/search-svgrepo-com.svg);
+        background-size: 80% 80%;
+        background-position: 4px center;
+        background-repeat: no-repeat;
+        color: white;
+        overflow: hidden;
+        border: none;
+
+    }
+
+    .desMeS {
+        display: none;
+    }
+
+    
+
+}
+
+
 @media only screen and (max-width:500px) {
     .container {
-        background-image:linear-gradient(rgba(39, 4, 4, 0.2),rgba(10, 10, 10, 0.5),rgba(12, 12, 12, 0.8)), url(/img/for_smallscreen.jpeg);
-        overflow:scroll;
+        background-image: linear-gradient(rgba(39, 4, 4, 0.2), rgba(10, 10, 10, 0.5), rgba(12, 12, 12, 0.8)), url(/img/for_smallscreen.jpeg);
+        overflow: scroll;
         background-color: rgb(43, 42, 42);
     }
 
@@ -229,7 +293,33 @@ hr{
         display: block;
     }
 
-    .show_con{
+    .desMeS {
+    width: 100%;
+    height: 60px;
+    text-align: end;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 14px;
+    color: rgb(201, 201, 201);
+    position: relative;
+    padding-right: 20px;
+    top: -350px;
+    display: block;
+}
+
+.desMe{
+    display: none;
+}
+
+a{
+    font-style: italic;
+    font-weight: 800;
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+}
+
+    .show_con {
         width: 100%;
         height: 70%;
         backdrop-filter: blur(10px);
@@ -242,6 +332,17 @@ hr{
         overflow: hidden;
     }
 
+    .show_con2 {
+        width: 100%;
+        height: 90%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        padding: 0px 30px;
+        gap: 20px 0px;
+    }
+
     .show_div1 {
         width: 100%;
         height: 50%;
@@ -250,18 +351,17 @@ hr{
         display: flex;
         justify-content: center;
         align-items: center;
-        
+
     }
 
     .show_div2 {
         position: static;
         width: 90%;
-        /* text-align: center; */
         padding: 0px 0px;
-        
 
     }
-    .temp_div{
+
+    .temp_div {
         width: 100%;
         font-size: 7.5em;
         font-weight: 500;
@@ -269,36 +369,37 @@ hr{
         letter-spacing: 0px;
         text-align: center;
         /* background-color: white; */
-    
+
     }
 
     .h4_disc{
         font-size: 1em;
         color: rgb(201, 201, 201);
-        font-weight: 900;
+    font-weight: 700;
 
-        
     }
-    .h4_disc2{
+
+    .h4_disc2 {
         font-size: 15px;
         text-transform: capitalize;
         font-style: italic;
-        font-weight: 550;
+        font-weight: 500;
     }
 
-    .time_div{
+    .time_div {
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
     }
 
-    .city_h4{
+    .city_h4 {
         font-size: 1.5em;
         font-weight: 500;
         font-family: "Oxygen", sans-serif;
     }
-    .time_h4{
+
+    .time_h4 {
         font-size: 16px;
         font-weight: 400;
         margin-top: 5px;
@@ -310,29 +411,77 @@ hr{
         margin-top: 15px;
         padding: 0px 10px;
     }
-    
+
     input {
         width: 70%;
         height: 40px;
         background-color: transparent;
         outline: none;
         border: none;
-        border-bottom:2px solid white;
+        border-bottom: 2px solid white;
         text-indent: 10px;
         color: white;
         font-family: "Oxygen", sans-serif;
         font-size: 1em;
         letter-spacing: 2px;
         border-radius: 0px;
-        
-    
+
+
     }
-    
-    ::placeholder{
+
+    ::placeholder {
         color: white;
         font-family: "Oxygen", sans-serif;
         font-size: 1.1em;
         letter-spacing: 0px;
-    
+
     }
+
+    button {
+        width: 10%;
+        height: 40px;
+        border-radius: 50%;
+        background-image: url(img/search-svgrepo-com.svg);
+        background-size: 80% 80%;
+        background-position: 4px center;
+        background-repeat: no-repeat;
+        color: white;
+        overflow: hidden;
+        border: none;
+
+    }
+
+
+}
+
+
+@media only screen and (max-height:420px) {
+    .container {
+        background-image: linear-gradient(rgba(39, 4, 4, 0.2), rgba(10, 10, 10, 0.5), rgba(12, 12, 12, 0.8)), url(/img/for_smallscreen.jpeg);
+        overflow: scroll;
+        background-color: rgb(43, 42, 42);
+    }
+
+    .show_con {
+        overflow: scroll;
+    }
+
+    input {
+        border-radius: 0px
+    }
+
+    button {
+        width: 9%;
+        height: 40px;
+        border-radius: 50%;
+        background-image: url(img/search-svgrepo-com.svg);
+        background-size: 80% 80%;
+        background-position: 4px center;
+        background-repeat: no-repeat;
+        color: white;
+        overflow: hidden;
+        border: none;
+
+    }
+
 }
